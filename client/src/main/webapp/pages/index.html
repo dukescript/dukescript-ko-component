@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    </head>
+    <body>
+        <h1>Like or Dislike?</h1>
+        <ul data-bind="foreach: products">
+            <li class="product">
+                <strong data-bind="text: name"></strong>
+            <like-widget params="value: userRating"></like-widget>
+        </li>
+    </ul>
+    <!-- boot bck2brwsr -->
+    <script type="text/javascript" src="bck2brwsr.js"></script>
+    <script>
+        var vm = bck2brwsr('kocomponent.js');
+        var c = vm.loadClass('com.dukescript.demos.kocomponent.BrowserMain');
+        c.invoke('main');
+    </script>
+</body>
+</html>
